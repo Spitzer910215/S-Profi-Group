@@ -5,8 +5,17 @@ body {
     padding: 0;
     color: #333;
     background-color: #fff;
-    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+    overflow-x: hidden;
     max-width: 100vw;
+    box-sizing: border-box;
+}
+
+/* Контейнер для основного контента */
+main {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Шапка сайта */
@@ -26,14 +35,6 @@ header {
     box-sizing: border-box;
 }
 
-/* Контейнер для основного контента */
-main {
-    width: 100%;
-    max-width: 100vw;
-    box-sizing: border-box;
-    overflow-x: hidden;
-}
-
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -48,6 +49,7 @@ main {
     margin-right: 8px;
 }
 
+/* Навигация */
 nav ul {
     list-style: none;
     display: flex;
@@ -65,7 +67,7 @@ nav ul li a {
     font-size: 16px;
     padding: 5px 10px;
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
-    white-space: nowrap; /* Предотвращает перенос текста */
+    white-space: nowrap;
 }
 
 nav ul li a:hover,
@@ -165,4 +167,49 @@ button:hover {
 .social-icons a:hover {
     color: red;
     transform: scale(1.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        background: none;
+        border: none;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .services, .advantages {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
 }
