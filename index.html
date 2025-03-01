@@ -13,45 +13,43 @@
         }
         header {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            padding: 20px;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: white;
             border-bottom: 1px solid #ddd;
         }
         .logo {
             font-size: 24px;
             font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
         }
         .logo::before {
-            content: '\25B2'; /* Треугольник как в логотипе */
+            content: "\25B2";
             color: red;
-            display: inline-block;
-            margin-right: 10px;
+            font-size: 20px;
+            margin-right: 8px;
         }
         nav ul {
             list-style: none;
-            padding: 0;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+            padding: 0;
+            margin: 0;
         }
         nav ul li {
-            display: block;
+            margin: 0 15px;
         }
         nav ul li a {
             text-decoration: none;
             color: black;
-            font-size: 18px;
-            font-weight: bold;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">S Profi Group</div>
+        <div class="logo">S PROFI GROUP</div>
         <nav>
             <ul>
                 <li><a href="index.html">Главная</a></li>
@@ -62,14 +60,5 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="hero">
-            <h1>Профессиональные консультации в сфере бухгалтерского учета</h1>
-            <p>Оптимальные решения для бизнеса от экспертов S Profi Group</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 S Profi Group. Все права защищены.</p>
-    </footer>
 </body>
 </html>
