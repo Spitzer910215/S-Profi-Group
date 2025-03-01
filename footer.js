@@ -1,11 +1,7 @@
-<footer class="footer">
-    <p>&copy; 2025 S Profi Group. Все права защищены.</p>
-    <div class="social-icons">
-        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
-    </div>
-</footer>
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("footer-container").innerHTML = data;
+        });
+});
