@@ -22,6 +22,12 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
+header.shrink {
+    padding: 10px 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .logo {
     font-size: 24px;
     font-weight: bold;
@@ -75,6 +81,9 @@ nav ul li a.active {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 15px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -83,6 +92,7 @@ nav ul li a.active {
     margin: 0 auto;
 }
 
+/* Анимация появления */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -94,19 +104,16 @@ nav ul li a.active {
     }
 }
 
-/* Кнопки */
-button {
-    display: inline-block;
-    padding: 12px 25px;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+/* Секции */
+.section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-button:hover {
-    background: #b02a37;
-    transform: scale(1.05);
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Грид-секции */
@@ -122,13 +129,62 @@ button:hover {
     background: #f4f4f4;
     border-radius: 10px;
     font-size: 18px;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .services div:hover, .advantages div:hover {
     background: red;
     color: white;
     transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопки */
+button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #b02a37;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+/* Форма обратной связи */
+.contact-form {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.contact-form button {
+    width: 90%;
+    max-width: 500px;
 }
 
 /* Подвал */
@@ -137,6 +193,10 @@ button:hover {
     color: white;
     text-align: center;
     padding: 30px;
+}
+
+.social-icons {
+    margin-top: 10px;
 }
 
 .social-icons a {
