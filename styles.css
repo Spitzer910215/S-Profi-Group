@@ -12,9 +12,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 15px 40px;
     background-color: white;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #eee;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
 
 .logo {
@@ -46,60 +51,103 @@ nav ul li a {
     text-decoration: none;
     color: black;
     font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
 }
 
 /* Главные секции */
 .hero {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #f43b47, #453a94);
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
+.hero h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #222;
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Кнопки */
 button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: red;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: darkred;
+    background: #b02a37;
+    transform: scale(1.05);
+}
+
+/* Грид-секции */
+.services, .advantages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.services div, .advantages div {
+    padding: 15px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.services div:hover, .advantages div:hover {
+    background: red;
+    color: white;
+    transform: scale(1.05);
 }
 
 /* Подвал */
 .footer {
+    background: #222;
+    color: white;
     text-align: center;
-    padding: 20px;
-    background-color: #ddd;
-}
-
-.social-icons {
-    margin-top: 10px;
+    padding: 30px;
 }
 
 .social-icons a {
     margin: 0 10px;
     text-decoration: none;
     font-size: 24px;
-    color: black;
+    color: white;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .social-icons a:hover {
     color: red;
+    transform: scale(1.2);
 }
