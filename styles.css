@@ -221,3 +221,35 @@ button:hover {
         font-size: 24px;
     }
 }
+/* Адаптивные заголовки */
+.hero h1 {
+    font-size: clamp(24px, 5vw, 36px); /* Авто-адаптация */
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Улучшенная адаптация hero */
+.hero {
+    text-align: center;
+    min-height: 50vh; /* Занимает больше пространства */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vw 5vw; /* Гибкий отступ */
+    background: linear-gradient(to right, #f43b47, #453a94);
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Дополнительная адаптация для узких экранов */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 60vh;
+        padding: 15vw 5vw;
+    }
+}
