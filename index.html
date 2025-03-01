@@ -45,6 +45,24 @@
             color: black;
             font-size: 16px;
         }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+        }
+        .services, .advantages, .cases, .testimonials, .contact-form {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .services div, .advantages div {
+            margin-bottom: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -60,5 +78,47 @@
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="hero">
+            <h1>Эксперты в бухгалтерском учете и налогообложении</h1>
+            <p>Оптимальные решения для вашего бизнеса. Консультации, аутсорсинг, автоматизация и поддержка компаний.</p>
+            <button>Получить консультацию</button>
+        </section>
+        <section class="services">
+            <h2>Наши услуги</h2>
+            <div>Консультации по бухгалтерскому и налоговому учету</div>
+            <div>Аутсорсинг главного бухгалтера и финдиректора</div>
+            <div>Автоматизация учета (1С и другие системы)</div>
+            <div>Глобальная автоматизация документооборота</div>
+        </section>
+        <section class="advantages">
+            <h2>Почему выбирают нас?</h2>
+            <div>10+ лет на рынке</div>
+            <div>Международный подход</div>
+            <div>Технологические решения</div>
+            <div>Индивидуальный подход</div>
+        </section>
+        <section class="cases">
+            <h2>Наши кейсы</h2>
+            <p>Описание успешных проектов...</p>
+        </section>
+        <section class="testimonials">
+            <h2>Отзывы клиентов</h2>
+            <p>Отзывы довольных клиентов...</p>
+        </section>
+        <section class="contact-form">
+            <h2>Свяжитесь с нами</h2>
+            <form>
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="Email" required>
+                <input type="tel" placeholder="Телефон" required>
+                <textarea placeholder="Сообщение"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 S Profi Group. Все права защищены.</p>
+    </footer>
 </body>
 </html>
