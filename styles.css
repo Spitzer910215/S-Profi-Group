@@ -5,6 +5,8 @@ body {
     padding: 0;
     color: #333;
     background-color: #fff;
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+    max-width: 100vw;
 }
 
 /* Шапка сайта */
@@ -18,14 +20,18 @@ header {
     position: sticky;
     top: 0;
     width: 100%;
+    max-width: 100vw;
     z-index: 1000;
     transition: all 0.3s ease-in-out;
+    box-sizing: border-box;
 }
 
-header.shrink {
-    padding: 10px 40px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Контейнер для основного контента */
+main {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -59,6 +65,7 @@ nav ul li a {
     font-size: 16px;
     padding: 5px 10px;
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+    white-space: nowrap; /* Предотвращает перенос текста */
 }
 
 nav ul li a:hover,
@@ -75,6 +82,8 @@ nav ul li a.active {
     background: linear-gradient(to right, #f43b47, #453a94);
     color: white;
     animation: fadeIn 1.5s ease-in-out;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero h1 {
@@ -86,42 +95,16 @@ nav ul li a.active {
     -webkit-text-fill-color: transparent;
 }
 
-.hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* Анимация появления */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Секции */
-.section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Грид-секции */
 .services, .advantages {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .services div, .advantages div {
@@ -160,43 +143,15 @@ button:hover {
     box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }
 
-/* Форма обратной связи */
-.contact-form {
-    text-align: center;
-    background: #f9f9f9;
-    padding: 50px 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 90%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.contact-form textarea {
-    height: 100px;
-}
-
-.contact-form button {
-    width: 90%;
-    max-width: 500px;
-}
-
 /* Подвал */
 .footer {
     background: #222;
     color: white;
     text-align: center;
     padding: 30px;
-}
-
-.social-icons {
-    margin-top: 10px;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
 }
 
 .social-icons a {
