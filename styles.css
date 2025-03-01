@@ -105,9 +105,8 @@ nav ul li a.active {
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 15px;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Грид-секции */
